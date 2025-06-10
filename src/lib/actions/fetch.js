@@ -13,7 +13,7 @@ export async function fetchCategories() {
 export async function getPics(param) {
   const { data: photos, error } = await supabase
     .from('photos')
-    .select('*, categories(name)')
+    .select('*, categories!inner(name)')
     .eq('categories.name', param)
     .order('created_at', { ascending: true });
 
@@ -24,6 +24,7 @@ export async function getPics(param) {
 
   return photos;
 }
+
 export async function getServices() {
   const { data: services, error } = await supabase
     .from('services')

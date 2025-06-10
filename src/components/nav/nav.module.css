@@ -1,0 +1,12 @@
+.logo{
+ 
+  background: linear-gradient(90deg, #f9572a, #ffc905); /* Applies a horizontal gradient from orange to yellow */
+  background-clip: text; /* Clips the background to the shape of the text (standard) */
+  -webkit-background-clip: text; /* Ensures the effect works in WebKit browsers (like Chrome, Safari) */
+  -webkit-text-fill-color: transparent; /* Makes the text transparent so the gradient background shows through */
+font-size: 2rem;
+font-weight: 400;
+}
+.li:hover{
+color: #f9572a;
+}

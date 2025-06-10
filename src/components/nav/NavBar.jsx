@@ -1,4 +1,5 @@
 "use client"
+import classes from '@/components/nav/nav.module.css'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import NavList from './NavList';
 import { useEffect, useState } from 'react';
@@ -23,11 +24,9 @@ export default function NavBar() {
   }, []);
   return (
   <div style={{backgroundColor:`${color}`}}  className=" fixed left-0 top-0 w-full z-[100] ease-in duration-300">
-      {/* ease-in et duration pour le changement du couleur en scrolling */} 
       <nav className="max-w-[1240px] h-[15vh] m-auto flex justify-between items-center p-4 text-white">
         <div> 
-          <h1  className="text-4xl logo">Studio Mouche</h1>
-          {/* <h1 style={{color:`${textColor}`}} className="font-bold text-4xl">Studio Mouche</h1> */}
+          <h1  className={classes.logo}>Studio Mouche</h1>
         </div>
         <NavList textColor={textColor} liStyle={"p-4"} ulStyle={"hidden sm:flex"} />
         {/* Mobile buttons */}
