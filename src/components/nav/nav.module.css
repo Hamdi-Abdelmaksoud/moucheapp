@@ -7,6 +7,13 @@
 font-size: 2rem;
 font-weight: 400;
 }
-.li:hover{
-color: #f9572a;
+.active {
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  
 }

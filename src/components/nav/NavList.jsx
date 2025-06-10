@@ -1,22 +1,32 @@
+'use client'
 import Link from "next/link";
-import classes from '@/components/nav/nav.module.css'
+import classes from '@/components/nav/nav.module.css';
+import { usePathname } from "next/navigation";
 
 export default function NavList({ ulStyle, liStyle, textColor }) {
+  const currentPath = usePathname();
+
+  const navLinks = [
+    { label: "Accueil", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "Galerie", href: "/galerie" },
+    { label: "Contacts", href: "/contacts" },
+  ];
+
+const black="#000"
   return (
     <ul className={ulStyle}>
-      <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }}  className={classes.li}>Accueil</Link>
-      </li>
-      <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }} className={classes.li} >Services</Link>
-      </li>
-      <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }} className={classes.li}>Galerie</Link>
-      </li>
-      <li className={liStyle}>
-        <Link href="/" style={{ color: textColor }} className={classes.li}  >Contacts</Link>
-      </li>
- 
+      {navLinks.map(({ label, href }) => (
+        <li className={liStyle} key={href}>
+          <Link
+            href={href}
+           
+            className={` ${textColor === black ? 'text-black' : 'text-amber-50'} ${currentPath === href ? classes.active : ''}`}
+            >
+            {label}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }
