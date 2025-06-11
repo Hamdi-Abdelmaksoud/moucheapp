@@ -24,3 +24,6 @@ body {
    
   font-family: Arial, Helvetica, sans-serif;
 }
+.bg-gradient-orange-yellow {
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+}

@@ -4,16 +4,17 @@
   background-clip: text; /* Clips the background to the shape of the text (standard) */
   -webkit-background-clip: text; /* Ensures the effect works in WebKit browsers (like Chrome, Safari) */
   -webkit-text-fill-color: transparent; /* Makes the text transparent so the gradient background shows through */
-font-size: 2rem;
-font-weight: 400;
+
 }
 .active {
   font-weight: bold;
-
   background: linear-gradient(90deg, #f9572a, #ffc905);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
   
+}
+.bg-gradient-orange-yellow {
+  background: linear-gradient(90deg, #f9572a, #ffc905);
 }

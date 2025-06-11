@@ -1,23 +1,29 @@
-"use client" 
+"use client";
+
 import { motion } from "framer-motion";
+import { FlipWords } from "../ui/FlipWord";
 // import SplitText from "@/components/split";
-export default function Presentation(){
-  return(
-        <motion.div
-        className="text-white z-[2] ml-[10vw] md:ml-[20vw] mt-[20vh]"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeIn" }}
-      >
- 
-        <div className="flex flex-col  gap-4">
-          {/* <h2 className="text-xl md:text-5xl font-bold">Studio Mouche By Ahmed Tlili</h2> */}
-          <p className="text-base">Capturer l’instant, révéler l’émotion.</p>
-          <div className="flex items-center gap-3">
-            <button >contactez nous </button>
-            <span>voir mon travail</span>
-          </div>
-        </div>
-      </motion.div>
-  )
+
+export default function Presentation() {
+  const words = [
+    'Photographie de Mariage',
+    'Shooting professionnel',
+    'Portrait créatif',
+    'Spot publicitaire',
+  ];
+
+  return (
+    <div className="bg-black/70 text-amber-50 flex flex-col items-center lg:items-start gap-4 p-5 mt-[25rem] w-[310px] rounded-2xl md:w-[500px] ">
+      <FlipWords words={words} className="text-xl md:text-2xl font-bold" />
+      <p className="md:text-xl">Capturer l’instant, révéler l’émotion.</p>
+      <div className="flex items-center gap-3">
+        <button
+          className="bg-black text-white hover:scale-95 transition-transform duration-300 ease-in-out p-4 rounded-full shadow-md hover:shadow-lg"
+        >
+          Contactez-nous
+        </button>
+        <span>voir mon travail</span>
+      </div>
+    </div>
+  );
 }

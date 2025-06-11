@@ -26,7 +26,7 @@ export default function NavBar() {
   <div style={{backgroundColor:`${color}`}}  className=" fixed left-0 top-0 w-full z-[100] ease-in duration-300">
       <nav className="max-w-[1240px] h-[15vh] m-auto flex justify-between items-center p-4 text-white">
         <div> 
-          <h1  className={classes.logo}>Studio Mouche</h1>
+          <h1  className={`${classes.logo} text-4xl font-bold  sm:text-3xl`}>Studio Mouche</h1>
         </div>
         <NavList textColor={textColor} liStyle={"p-4"} ulStyle={"hidden sm:flex"} />
         {/* Mobile buttons */}
