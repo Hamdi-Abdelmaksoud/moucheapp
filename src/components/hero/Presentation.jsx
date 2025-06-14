@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FlipWords } from "../ui/FlipWord";
+import Btn from "../btn";
 // import SplitText from "@/components/split";
 
 export default function Presentation() {
@@ -17,11 +18,7 @@ export default function Presentation() {
       <FlipWords words={words} className="text-xl md:text-2xl font-bold" />
       <p className="md:text-xl">Capturer l’instant, révéler l’émotion.</p>
       <div className="flex items-center gap-3">
-        <button
-          className="bg-black text-white hover:scale-95 transition-transform duration-300 ease-in-out p-4 rounded-full shadow-md hover:shadow-lg"
-        >
-          Contactez-nous
-        </button>
+      <Btn />
         <span>voir mon travail</span>
       </div>
     </div>
