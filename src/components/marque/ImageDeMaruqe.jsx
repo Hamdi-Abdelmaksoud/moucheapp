@@ -5,3 +5,8 @@ export default async function ImageDeMarque()
   const pics = await getPics("marque"); 
   return  <Marque  pics={pics}/>
 }
+ 
+ 
+ 
+  
+ 

@@ -35,9 +35,9 @@ export default function NavBar() {
         </div>
         {/* mobile menu */}
         <div className={!menu ? "sm:hidden absolute top-0  left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-          : "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+          : "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in-out duration-600"
         }>
-          <NavList liStyle={"p-4 text-4xl"} ulStyle={'flex-col '} />
+          <NavList liStyle={"p-4 text-4xl"} ulStyle={'flex-col '} menuState={toggleMenu} />
         </div>
       </nav>
     </div>
