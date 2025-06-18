@@ -15,11 +15,11 @@ export default function WeddingSlide({ pics }) {
     setCurrent(current === 0 ? length - 1 : current - 1)
   }
   return (
-    <div className="min-w-full  mt-10 p-8 bg-amber-200 flex flex-col lg:flex-row items-center justify-center ">
+    <div  style={{ backgroundColor: "#ffdfb7" }}className="min-w-full  mt-10 p-8 flex flex-col sm:flex-row items-center justify-center ">
       <Title />
       <div className="flex items-center justify-center relative ">
-        <SlArrowLeft onClick={prevSlide} className="absolute z-20 left-0 w-[70px] h-[100px]  text-orange-400  lg:static lg:w-[250px] lg:h-[250px] " />
-        <div className="flex bg-slate-700 my-10 w-[85vw] h-[400px] md:w-[500px] md:h-[400px] relative overflow-hidden mx-auto">
+        <SlArrowLeft onClick={prevSlide}  className=" absolute z-20 left-0 w-[70px] h-[100px]  text-orange-400  lg:static lg:w-[250px] lg:h-[250px] " />
+        <div className="flex bg-black my-10 w-[320px] h-[400px] relative overflow-hidden lg:w-[400px] mx-auto">
           {pics.length > 0 ? (
             pics.map((pic, i) => (
               <div key={i} className={i === current ? 'opacity-[1] ease-in duration-1000 ' : 'opacity-0'}>

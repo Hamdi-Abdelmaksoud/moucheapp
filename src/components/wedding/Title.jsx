@@ -1,8 +1,11 @@
 export default function Title(){
   return(
-      <div className="lg:w-1/3 w-[90vw]  p-4  md:w-[470px] h-full flex flex-col items-center gap-8">
-        <h3 className="text-2xl font-semibold ">Photographie de mariage</h3>
-        <p className="relative z-2 text-xl">Des souvenirs inoubliables, immortalisés avec amour et créativité.</p>
-      </div>
+      <div className="w-[300px] sm:w-[250px]  p-4 m-4">
+        {/* <h3 className="text-2xl font-semibold ">Photographie de mariage</h3> */}
+<p className="text-lg   font-light leading-relaxed italic text-justify">
+  Raconter votre amour en images. Mes clichés capturent la tendresse, les regards et les émotions vraies. Pour que chaque photo devienne un souvenir précieux de votre journée unique.
+</p>
+
+  </div>
   )
 }

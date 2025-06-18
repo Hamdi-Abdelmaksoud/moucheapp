@@ -18,7 +18,9 @@
   --background: #ededed;
   }
 }
-
+.bg-gradient-orange-yellow {
+  background: linear-gradient(90deg, #f9572a, #ffc905);
+}
 body {
   background: var(--background);
    
@@ -26,4 +28,18 @@ body {
 }
 .bg-gradient-orange-yellow {
   background: linear-gradient(90deg, #f9572a, #ffc905);
+}
+@keyframes scrollLeft {
+ 
+  to {
+    left: -200px;
+  }
+}
+.animate-scroll-left {
+  animation-name: scrollLeft;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  position: absolute;
+    left:max(2000px,100%);  
 }

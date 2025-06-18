@@ -36,4 +36,17 @@ export async function getServices() {
 
   return services;
 }
+export async function getLastPics() {
+  const { data: photos, error } = await supabase
+    .from('photos')
+    .select('*')
+    .order('created_at', { ascending: false }) // ou 'id' si tu n'as pas 'created_at'
+    .limit(5);
 
+  if (error) {
+    console.error('Erreur lors du chargement des photos:', error);
+    return [];
+  }
+
+  return photos;
+}
