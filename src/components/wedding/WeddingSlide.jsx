@@ -1,31 +1,58 @@
-"use client"
+"use client";
+
 import Image from "next/image";
-import { SlArrowLeft } from "react-icons/sl";
-import { SlArrowRight } from "react-icons/sl";
+import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import Title from "./Title";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function WeddingSlide({ pics }) {
-  const [current, setCurrent] = useState(0)
-  const length = pics.length
+  const [current, setCurrent] = useState(0);
+  const length = pics.length;
+
   const nextSlide = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1)
-  }
+    setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
+  };
+
   const prevSlide = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1)
-  }
+    setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
+  };
+ 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [current]);
+
   return (
-    <div  style={{ backgroundColor: "#ffdfb7" }}className="min-w-full  mt-10 p-8 flex flex-col sm:flex-row items-center justify-center ">
+    <div
+      style={{ backgroundColor: "#ffdfb7" }}
+      className="min-w-full  p-8 flex flex-col sm:flex-row items-center justify-center"
+    >
       <Title />
-      <div className="flex items-center justify-center relative ">
-        <SlArrowLeft onClick={prevSlide}  className=" absolute z-20 left-0 w-[70px] h-[100px]  text-orange-400  lg:static lg:w-[250px] lg:h-[250px] " />
-        <div className="flex bg-black my-10 w-[320px] h-[400px] relative overflow-hidden lg:w-[400px] mx-auto">
+      <div className="flex items-center justify-center relative">
+        <SlArrowLeft
+          onClick={prevSlide}
+          className="absolute z-20 left-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[150px] lg:h-[150px]"
+          aria-label="Image précédente"
+        />
+        <div className="relative bg-black my-10 w-[320px] h-[400px] overflow-hidden lg:w-[400px]">
           {pics.length > 0 ? (
             pics.map((pic, i) => (
-              <div key={i} className={i === current ? 'opacity-[1] ease-in duration-1000 ' : 'opacity-0'}>
-                {i === current && <Image src={pic.url} key={pic.id} alt={pic.description} fill   sizes="(max-width: 768px) 85vw, (max-width: 1200px) 500px, 600px"
-    style={{ objectFit: 'cover' }}/>
-                }
+              <div
+                key={pic.id || i}
+                className={`absolute inset-0 transition-opacity duration-700 ${
+                  i === current ? "opacity-100 z-10" : "opacity-0 z-0"
+                }`}
+              >
+                <Image
+                  src={pic.url}
+                  alt={pic.title}
+                  fill
+                  sizes="(max-width: 768px) 85vw, (max-width: 1200px) 500px, 600px"
+                  style={{ objectFit: "cover" }}
+                  priority={i === current} 
+                />
               </div>
             ))
           ) : (
@@ -34,8 +61,12 @@ export default function WeddingSlide({ pics }) {
             </div>
           )}
         </div>
-        <SlArrowRight onClick={nextSlide} className="absolute w-[70px] h-[100px]   text-orange-400 right-0 lg:static lg:w-[250px] lg:h-[250px]" />
+        <SlArrowRight
+          onClick={nextSlide}
+          className="absolute z-20 right-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[150px] lg:h-[150px]"
+          aria-label="Image suivante"
+        />
       </div>
     </div>
-  )
+  );
 }

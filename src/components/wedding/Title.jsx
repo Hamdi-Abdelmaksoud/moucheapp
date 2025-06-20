@@ -1,11 +1,18 @@
-export default function Title(){
-  return(
-      <div className="w-[300px] sm:w-[250px]  p-4 m-4">
-        {/* <h3 className="text-2xl font-semibold ">Photographie de mariage</h3> */}
-<p className="text-lg   font-light leading-relaxed italic text-justify">
-  Raconter votre amour en images. Mes clichés capturent la tendresse, les regards et les émotions vraies. Pour que chaque photo devienne un souvenir précieux de votre journée unique.
-</p>
+import { FaHeart, FaCameraRetro } from 'react-icons/fa';
 
-  </div>
-  )
+export default function Title() {
+  return (
+    <div className="w-full max-w-md p-6 m-4">
+      <div className="flex items-center gap-2 mb-2">
+        <FaCameraRetro className="text-pink-500 text-xl" />
+        <h3 className="md:text-2xl font-semibold">Photographie de mariage</h3>
+        {/* <FaHeart className="text-red-500 text-xl" /> */}
+      </div>
+      <p className="text-base sm:text-lg text-justify leading-relaxed italic text-gray-800">
+        Immortaliser les moments d’émotion pure, capturer chaque regard sincère, chaque geste d’amour.
+        À travers mes clichés, je raconte votre histoire avec authenticité et sensibilité, pour que
+        chaque image devienne un souvenir intemporel de votre journée inoubliable.
+      </p>
+    </div>
+  );
 }

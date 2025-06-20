@@ -5,7 +5,7 @@ import Branding from "./Branding";
 import BrandingMobile from "./BrandingMobile";
 export default function Marque({ pics }) {
   return (
-    <div className="flex flex-col mt-4 md:mx-auto md:w-[760px] md:flex-row md:gap-4 items-center gap-6  ">
+    <div style={{backgroundColor:"#323232"}} className="flex flex-col  md:mx-auto p-8 md:w-full lg:justify-center md:flex-row md:gap-4 items-center gap-6  ">
       {/* Version pc */}
     <Branding />
       {/* Version mobile */}
@@ -25,8 +25,8 @@ export default function Marque({ pics }) {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1.2, delay: 1.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-  className="text-2xl font-semibold w-[320px] md:w-[200px] leading-relaxed md:text-pretty lg:flex-col">
-          Créez une identité visuelle qui marque les esprits.
+  className="branding-color text-2xl font-semibold w-[320px] md:w-[220px] leading-relaxed md:text-justify lg:flex-col">
+          Créez une identité visuelle unique qui marque les esprits.
         </motion.p>
         
       </div>
