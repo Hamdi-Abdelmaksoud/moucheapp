@@ -13,7 +13,7 @@ export default function BrandingMobile(){
         }}
         viewport={{ once: true, amount: 0.6 }} // déclenche plus tôt et qu'une seule fois
       >
-        <h3 className="text-5xl font-extrabold ">BRANDING</h3>
+        <h3 className="text-5xl font-semibold text-white ">BRANDING</h3>
       </motion.div>
   )
 }

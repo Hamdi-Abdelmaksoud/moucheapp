@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-import Title from "./Title";
 import { useEffect, useState } from "react";
 
 export default function WeddingSlide({ pics }) {
@@ -16,7 +15,7 @@ export default function WeddingSlide({ pics }) {
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? length - 1 : prev - 1));
   };
- 
+
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
@@ -25,25 +24,28 @@ export default function WeddingSlide({ pics }) {
   }, [current]);
 
   return (
-    <div
-      style={{ backgroundColor: "#ffdfb7" }}
-      className="min-w-full  p-8 flex flex-col sm:flex-row items-center justify-center"
+    <div style={{backgroundColor:"#c8ad7f"}}
+      className="min-w-full  p-8 flex flex-col md:flex-row items-center justify-center bg-cover bg-center bg-no-repeat"
     >
-      <Title />
+
+      <div className="w-[340px]   lg:w-[320px] max-w-md p-4 mx-4  ">
+        <p className="text-base sm:text-lg text-justify leading-relaxed italic text-gray-800">
+          En tant que photographe, être à vos côtés à chaque étape de votre aventure vers le grand jour est bien plus qu’un métier – c’est un véritable privilège. C’est l’occasion unique de capturer les instants intimes, les regards complices et les émotions sincères qui marqueront le début d’un nouveau chapitre de votre histoire.
+        </p>
+      </div>
       <div className="flex items-center justify-center relative">
         <SlArrowLeft
           onClick={prevSlide}
           className="absolute z-20 left-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[150px] lg:h-[150px]"
           aria-label="Image précédente"
         />
-        <div className="relative bg-black my-10 w-[320px] h-[400px] overflow-hidden lg:w-[400px]">
+        <div className="relative bg-black my-10 w-[320px] h-[400px] overflow-hidden md:w-[400px]  ">
           {pics.length > 0 ? (
             pics.map((pic, i) => (
               <div
                 key={pic.id || i}
-                className={`absolute inset-0 transition-opacity duration-700 ${
-                  i === current ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
+                className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100 z-10" : "opacity-0 z-0"
+                  }`}
               >
                 <Image
                   src={pic.url}
@@ -51,7 +53,7 @@ export default function WeddingSlide({ pics }) {
                   fill
                   sizes="(max-width: 768px) 85vw, (max-width: 1200px) 500px, 600px"
                   style={{ objectFit: "cover" }}
-                  priority={i === current} 
+                  priority={i === current}
                 />
               </div>
             ))
@@ -67,6 +69,7 @@ export default function WeddingSlide({ pics }) {
           aria-label="Image suivante"
         />
       </div>
+ 
     </div>
   );
 }
