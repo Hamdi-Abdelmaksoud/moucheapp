@@ -9,9 +9,9 @@ export default function Dragable({ pics }) {
 
   const cardPosition = [
     "absolute top-15 left-[33%] sm:left-[43%] rotate-[-5deg]",
-    "absolute top-60 left-[16%] rotate-[-5deg] sm:left-[26%]",
-    "absolute top-55 left-[30%] rotate-[5deg] sm:left-[50%]",
-    "absolute top-25 left-[17%] rotate-[-5deg] sm:left-[55%]",
+    "absolute top-60 left-[16%] rotate-[-5deg] sm:left-[26%] md:top-40 ",
+    "absolute top-55 left-[30%] rotate-[5deg] sm:left-[50%] md:left-[60%] md:top-45",
+    "absolute top-25 left-[17%] rotate-[-5deg] sm:left-[55%] ",
     "absolute top-35 left-[13%] rotate-[5deg] sm:left-[33%]",
     "absolute top-40 left-[22%] sm:left-[43%]",
   ];

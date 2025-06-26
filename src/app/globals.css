@@ -56,7 +56,7 @@ body {
   position: absolute;
     left:max(2000px,100%);  
 }
-.branding-color {
-color: white;
+.whiteColor {
+color:#fefee2;
 
 }

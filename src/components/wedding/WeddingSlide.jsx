@@ -24,7 +24,7 @@ export default function WeddingSlide({ pics }) {
   }, [current]);
 
   return (
-    <div style={{backgroundColor:"#c8ad7f"}}
+    <div style={{backgroundColor:"#e1ceab"}}
       className="min-w-full  p-8 flex flex-col md:flex-row items-center justify-center bg-cover bg-center bg-no-repeat"
     >
 

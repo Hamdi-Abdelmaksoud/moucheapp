@@ -13,11 +13,11 @@ export default function NavBar() {
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 90) {
-        setColor('#faffef');
+        setColor('#fefee2');
         setTextColor('#000');
       } else {
         setColor('transparent');
-        setTextColor('#faffef');
+        setTextColor('#fefee2');
       }
     };
     window.addEventListener('scroll', changeColor)
