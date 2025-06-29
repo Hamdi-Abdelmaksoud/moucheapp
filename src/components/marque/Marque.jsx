@@ -5,7 +5,7 @@ import Branding from "./Branding";
 import BrandingMobile from "./BrandingMobile";
 export default function Marque({ pics }) {
   return (
-    <div   style={{backgroundColor:"#616160"}} className=" flex flex-col  md:mx-auto p-8 md:w-full lg:justify-center md:flex-row md:gap-4 items-center gap-6  ">
+    <div    className="bgGris flex flex-col  md:mx-auto p-8 md:w-full lg:justify-center md:flex-row md:gap-4 items-center gap-6  ">
       {/* Version pc */}
     <Branding />
       {/* Version mobile */}
