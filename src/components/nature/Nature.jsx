@@ -9,10 +9,9 @@ export default async function Nature() {
     }
 
     return (
-    <div className="rounded-md  flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
+    <div className="mb-20 rounded-md  flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards items={pics} direction="left"
           speed="slow" />
-<p className="absolute z-20 font-bold bottom-0 right-8  text-4xl md:text-7xl" >Street art</p>
     </div>);
   } catch (error) {
     console.error("Erreur lors de la récupération des images :", error);

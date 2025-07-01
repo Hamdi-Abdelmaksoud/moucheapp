@@ -9,11 +9,11 @@ export default async function Cards() {
     }
 
     return (
-    <div className="rounded-md flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={pics} direction="right"
-          speed="slow" />
-<p className="text-4xl z-20 md:text-7xl font-bold absolute top-0 left-4">Nature</p>
-    </div>);
+        <div className="rounded-md flex flex-col antialiased bg-white  items-center justify-center relative overflow-hidden">
+          <InfiniteMovingCards items={pics} direction="right"
+            speed="slow" />
+        </div>
+);
   } catch (error) {
     console.error("Erreur lors de la récupération des images :", error);
 
@@ -25,7 +25,7 @@ export default async function Cards() {
   }
 }
 
- 
- 
-  
- 
+
+
+
+

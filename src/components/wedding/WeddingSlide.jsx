@@ -25,21 +25,20 @@ export default function WeddingSlide({ pics }) {
 
   return (
     <div style={{backgroundColor:"#e1ceab"}}
-      className="min-w-full  p-8 flex flex-col md:flex-row items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="relative min-w-full  p-8 flex flex-col md:flex-row items-center justify-center "
     >
-
-      <div className="w-[340px]   lg:w-[320px] max-w-md p-4 mx-4  ">
+      <div className=" w-[300px]   ">
         <p className="text-base sm:text-lg text-justify leading-relaxed italic text-gray-800">
           En tant que photographe, être à vos côtés à chaque étape de votre aventure vers le grand jour est bien plus qu’un métier – c’est un véritable privilège. C’est l’occasion unique de capturer les instants intimes, les regards complices et les émotions sincères qui marqueront le début d’un nouveau chapitre de votre histoire.
         </p>
       </div>
-      <div className="flex items-center justify-center relative">
+      <div className="flex items-center justify-center relative ml-8">
         <SlArrowLeft
           onClick={prevSlide}
-          className="absolute z-20 left-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[150px] lg:h-[150px]"
+          className="absolute z-20 left-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[120px] lg:h-[120px]"
           aria-label="Image précédente"
         />
-        <div className="relative bg-black my-10 w-[320px] h-[400px] overflow-hidden md:w-[400px]  ">
+        <div className="relative bg-black my-10 w-[320px] h-[400px] overflow-hidden md:w-[400px] lg:w-[500px] lg:h-[500px] rounded-2xl">
           {pics.length > 0 ? (
             pics.map((pic, i) => (
               <div
@@ -65,10 +64,11 @@ export default function WeddingSlide({ pics }) {
         </div>
         <SlArrowRight
           onClick={nextSlide}
-          className="absolute z-20 right-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[150px] lg:h-[150px]"
+          className="absolute z-20 right-0 w-[70px] h-[100px] text-orange-400 cursor-pointer lg:static lg:w-[120px] lg:h-[120px]"
           aria-label="Image suivante"
         />
       </div>
+ 
  
     </div>
   );

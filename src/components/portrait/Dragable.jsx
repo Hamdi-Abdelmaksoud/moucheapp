@@ -8,12 +8,12 @@ export default function Dragable({ pics }) {
   const isInView = useInView(ref, { amount: 0.3 }); // visible à 30%
 
   const cardPosition = [
-    "absolute top-15 left-[33%] sm:left-[43%] rotate-[-5deg]",
-    "absolute top-60 left-[16%] rotate-[-5deg] sm:left-[26%] md:top-40 ",
-    "absolute top-55 left-[30%] rotate-[5deg] sm:left-[50%] md:left-[60%] md:top-45",
-    "absolute top-25 left-[17%] rotate-[-5deg] sm:left-[55%] ",
-    "absolute top-35 left-[13%] rotate-[5deg] sm:left-[33%]",
-    "absolute top-40 left-[22%] sm:left-[43%]",
+    "absolute top-15 left-[34%] sm:left-[43%] rotate-[-5deg]",
+    "absolute top-60 left-[17%] rotate-[-5deg] sm:left-[26%] md:top-40 ",
+    "absolute top-55 left-[31%] rotate-[5deg] sm:left-[50%] md:left-[60%] md:top-45",
+    "absolute top-25 left-[18%] rotate-[-5deg] sm:left-[55%] ",
+    "absolute top-35 left-[14%] rotate-[5deg] sm:left-[33%]",
+    "absolute top-40 left-[23%] sm:left-[43%]",
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Dragable({ pics }) {
             <img
               src={pic.url}
               alt={pic.title}
-              className="w-[200px] h-[250px] object-cover rounded-md"
+              className="w-[200px] h-[250px] object-cover rounded-md pointer-events-none"
             />
           </DraggableCardBody>
         ))}
